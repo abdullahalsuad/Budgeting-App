@@ -4,7 +4,7 @@ import { Form } from "react-router-dom"
 import { UserPlusIcon } from "@heroicons/react/24/solid";
 
 // assets
-// import illustration from "../assets/illustration.jpg"
+import illustration from "../assets/illustration.jpg"
 
 const Intro = () => {
   return (
@@ -23,13 +23,14 @@ const Intro = () => {
             required
             placeholder="What is your name?" aria-label="Your Name" autoComplete="given-name"
           />
+          <input type="hidden" name="_action" value="newUser" />
           <button type="submit" className="btn btn--dark">
             <span>Create Account</span>
             <UserPlusIcon width={20} />
           </button>
         </Form>
       </div>
-      {/* <img src={illustration} alt="Person with money" width={600} /> */}
+      <img src={illustration} alt="Person with money" width={600} />
     </div>
   )
 }
